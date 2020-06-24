@@ -3,7 +3,7 @@
 # Smallest base image
 FROM arm64v8/alpine
 
-LABEL maintainer="Kyle Manna <kyle@kylemanna.com>"
+LABEL maintainer="Nidal HADDAD haddad.nida1@gmail.com"
 
 # Testing: pamtester
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
@@ -30,5 +30,4 @@ CMD ["ovpn_run"]
 ADD ./bin /usr/local/bin
 RUN chmod a+x /usr/local/bin/*
 
-# Add support for OTP authentication using a PAM module
-ADD ./otp/openvpn /etc/pam.d/
+
